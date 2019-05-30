@@ -1,0 +1,2 @@
+npx nodemcu-tool <command> --port="/dev/ttyUSB0"
+python -m esptool --port /dev/ttyUSB0 write_flash -fm qio 0x00000 <firmware>

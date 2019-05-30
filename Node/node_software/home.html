@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Wow NodeMCU</title>
+    </head>
+    <body>
+        <h2>Config</h2>
+        <form method="POST">
+            <input type="hidden" name="start" value="on" />
+            <input type="submit" value="Start Node" />
+        </form>
+        <h3>Add MAC addresses</h3>
+        <form method="POST">
+            <label>MAC address (xx:xx:xx:xx:xx:xx)</label>
+            <input type="text" name="add_mac" />
+            <input type="submit" value="Add" />
+        </form>
+        
+        <h3>Remove MAC addresses</h3>
+        <form method="POST">
+            <label>MAC Address</label>
+            <input type="text" name="del_mac" />
+            <input type="submit" value="Remove" />
+        </form>
+        <h2>Target MAC addresses</h2>
+        <table>
+            <thead>
+                <tr>
+                    <td>MAC Address</td>
+                </tr>
+            </thead>
+            <tbody>
+            {{mac}}
+            </tbody>
+        </table>
+    </body>
+</html>

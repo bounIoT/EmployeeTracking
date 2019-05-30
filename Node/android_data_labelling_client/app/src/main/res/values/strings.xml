@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">send_packets_android_client</string>
+    <string name="start_measure">Start Measure</string>
+    <string name="status_s">Status: %s</string>
+    <string name="location_name">Location Name</string>
+    <string name="host_port">host:port</string>
+    <string name="connect">Connect</string>
+    <string name="stop_measure">Stop Measure</string>
+    <string name="packets_received">%d packets received</string>
+</resources>
