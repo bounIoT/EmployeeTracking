@@ -1,5 +1,7 @@
 # EmployeeTracking
 
+![A1](https://user-images.githubusercontent.com/5247569/58688317-cb3ddd00-838c-11e9-84e0-0b0aeb726e6c.jpg)
+
 This project aims to track locations of certain devices using Wi-Fi rssi measurements. We chose NodeMCU's to monitor Wi-Fi signals, but later we realized the signal strength measurements were very unstable. It is infeasible to use NodeMCU's for this project.
 
 ## Usage
@@ -70,8 +72,34 @@ In the `android_server` application the script named `only_serial_port.js` is us
   - socket.io
 * **UI/frontend**: This is the UI of the application, it is written using the React.js framework.
 * **Cloud/cloud_server**: This is the piece of software that runs on cloud. This software receives measurements from the nodes and sends predictions.
+  - react.js
   - socket.io
 * **ML**: This directory shows what we have done for machine learning purposes.
+  - scikit-learn
+  - numpy
+  - pandas
+
+## Schema
+
+![schema](https://user-images.githubusercontent.com/5247569/58688872-510e5800-838e-11e9-9132-9c30dcc5d73b.jpg)
+
+## Components
+
+Component | Name | Action
+---|---|---
+Embedded HW (monitoring) x3 | NodeMCU | Integration
+Embedded HW (communication) x3 | NodeMCU | Integration
+Gateway + Edge Computing Unit | Raspberry Pi | Integration
+Embedded HW (communication) | Realtek USB Wi-Fi Adapter | Integration
+Development UI (Android App for Data Collection) | Local, (Native Android) | Development; we receive data labels from the application.
+Embedded SW (Server Software for Android Application) | Local, (node.js) | Development; collects and sends data to MQTT broker
+Connectivity | mosquitto | Integration & Development; Used both in production and in development(data collection) of the solution
+Storage | sqlite3 | Integration & Development; Used both in production and in development of the application
+Embedded SW | Local, (Lua script for NodeMCU) | Configuration; Provides interface to configure NodeMCU's on start-up
+Cloud Service | DigitalOcean | Integration
+Software (ML Tools) | Various Python Libraries (scikit-learn, pandas, numpy) | Integration & Development; Trained a machine learning model on development, used that model in production
+Cloud SW | Local (node.js server application) | Integration
+Web Client | Local (react.js application) | Integration
 
 
 
