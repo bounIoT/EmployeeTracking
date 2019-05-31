@@ -59,25 +59,25 @@ In the `android_server` application the script named `only_serial_port.js` is us
 
 * **Node/android_data_labelling_client**: Small native Android application used for data labelling.
 * **Node/android_server**: Node.js application that is used to connect Android client to computer. Used open source libraries:
-  - mqtt
-  - serialport
-  - uuid
+  - mqtt (https://github.com/mqttjs/MQTT.js)
+  - serialport (https://github.com/serialport/node-serialport)
+  - uuid (https://github.com/kelektiv/node-uuid)
 * **Node/data_labelling_mqtt_client**: Node.js application to store received data on MQTT to an sqlite3 database.
-  - mqtt
-  - sqlite
+  - mqtt (https://github.com/mqttjs/MQTT.js)
+  - sqlite (https://github.com/kriasoft/node-sqlite)
 * **Node/node_software**: The code that runs on NodeMCU's.
 * **Node/rpi_edge_server**: The code that runs on Raspberry Pi, on production. This is a Node.js application that listens to MQTT and sends received information to cloud.
-  - mqtt
-  - axios
-  - socket.io
+  - mqtt (https://github.com/mqttjs/MQTT.js)
+  - axios (https://github.com/axios/axios)
+  - socket.io (https://socket.io/)
 * **UI/frontend**: This is the UI of the application, it is written using the React.js framework.
 * **Cloud/cloud_server**: This is the piece of software that runs on cloud. This software receives measurements from the nodes and sends predictions.
-  - react.js
-  - socket.io
+  - react.js (https://reactjs.org/)
+  - socket.io (https://socket.io/)
 * **ML**: This directory shows what we have done for machine learning purposes.
-  - scikit-learn
-  - numpy
-  - pandas
+  - scikit-learn (https://scikit-learn.org/stable/index.html)
+  - numpy (https://www.numpy.org/)
+  - pandas (https://pandas.pydata.org/)
 
 ## Schema
 
